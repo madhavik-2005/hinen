@@ -6,7 +6,8 @@ from PIL import Image
 import os
 os.system("apt-get update")
 os.system("apt-get install -y tesseract-ocr")
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = "./tesseract/tesseract"
+tessdata_dir_config = '--tessdata-dir "./tesseract/tessdata"'
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
